@@ -5,6 +5,8 @@
   exclude-result-prefixes="xsl ditaarch"
   version="2.0">
   
+  <xsl:output method="xml" version="1.0" indent="yes"/>
+  
   <xsl:template match="/">
   	<xsl:message> +++ audience extraction starts</xsl:message>
   	<audiences>
