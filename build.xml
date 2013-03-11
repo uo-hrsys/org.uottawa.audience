@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	(c) Copyright 2012, University of Ottawa	
+-->
+<project name="audience" basedir="." default="audience.extract">
+
+	
+    <!-- load xml properties -->
+    <target name="audience.extract">
+    
+       	    <echo>Extracting ditamap audience information...</echo>
+  	        <property name="map2audience.style" 
+  	                  location="${dita.plugin.org.uottawa.audience.dir}/xsl/audience-extract.xsl" />
+  	                  
+  	        <property name="args.xhtml.toc" value="index"/>
+  	        
+  	        <makeurl file="${dita.input.valfile}" property="dita.input.valfile.url" validate="no"></makeurl>    
+  	
+  	        <xslt
+  	        	processor="trax"
+				out="${output.dir}/audience.xml"
+				in="${args.input}"
+				classpathref="dost.class.path"
+				style="${map2audience.style}"
+			>
+      
+      </xslt>
+  
+    </target> 
+</project>

@@ -1,0 +1,6 @@
+<plugin id="org.uottawa.audience">
+  
+  <feature extension="depend.preprocess.pre" value="audience.extract"/>
+  <feature extension="dita.conductor.target.relative" file="build.xml" type="file" />
+  
+</plugin>
